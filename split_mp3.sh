@@ -26,6 +26,6 @@ mkdir -p "$file_name_no_ext"
 duration_seconds=$((duration_minutes * 60))
 
 # Cortar el archivo en fragmentos más cortos
-ffmpeg -i "$file_name" -f segment -segment_time "$duration_seconds" -c copy -map 0 -segment_format mp3 "$file_name_no_ext/%02d.mp3"
+ffmpeg -i "$file_name" -f segment -segment_time "$duration_seconds" -c copy -map 0 -segment_format mp3 "$file_name_no_ext/$file_name_no_ext-%02d.mp3"
 
 echo "El archivo $file_name se ha dividido en fragmentos de $duration_minutes minutos."
