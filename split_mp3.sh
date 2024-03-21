@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 # Verificar si se proporcionaron los parámetros necesarios
 if [ $# -lt 2 ]; then
     echo "Uso: $0 <nombre_del_archivo> <duracion_del_fragmento_en_minutos>"
